@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/Views/index.html")
 })
 
-//rota "composta"
+//rota
 app.get("/sobre", (req, res) => {
     res.send("Ganhamo")
 })

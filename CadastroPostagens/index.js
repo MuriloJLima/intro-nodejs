@@ -29,6 +29,7 @@ app.get('/', (req, res) =>{
     })
 })
 
+//rota get que renderiza o formulário
 app.get('/cad', (req, res) =>{
     res.render("formulario")
 })
@@ -46,6 +47,13 @@ app.post("/add", (req, res) =>{
         res.redirect('/')
     }).catch((erro) => {
         res.send(`HOUVE UM ERRO: ${erro}`)
+    })
+})
+
+//rota para deletar post através de id
+app.get('/deletar/:id', (req, res) =>{
+    post.destroy({where: {'id': req.params.id}}).then(() =>{
+        res.render('del')
     })
 })
 

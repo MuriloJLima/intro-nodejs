@@ -2,10 +2,15 @@
 
 {{!-- capturando os dados que são retornados em um array e os organizando no front --}}
 
+{{!-- each = para cada campo, trate da sequinte maneira: --}}
 {{#each posts}}
     <h1>{{titulo}}</h1>
     <p>{{conteudo}}</p>
+    {{!--botão para deletar o post attravés do id passado na rota --}}
+    <a href="/deletar/{{id}}"><button>deletar</button></a>
     <hr>
 {{/each}}
 
-{{!-- each = para cada campo, trate da sequinte maneira: --}}
+
+<a href="/cad"><button>cadastrar postagem</button></a>
+
